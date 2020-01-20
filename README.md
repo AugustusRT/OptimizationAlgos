@@ -8,12 +8,18 @@ In this project I implemented various optimization methods and loss functions fo
 3) **L2 Penalized Logistic Regression**: Use only optimization methods that only apply to smooth functions\
 
 ### Optimization Methods:
-i) Stochastic sub-gradien
+i) Stochastic sub-gradient
+
 ii) Stochastic gradient
+
 iii) Mini-batch (sub-)gradient
+
 iv) Stochastic average sub-gradient (SAG)
+
 v) Stochastic average gradient (SAG)
+
 vi) Gradient descent with Armijo line-search
+
 vii) Acceleratd gradient with Armijo line-search
 
 # Datasets
