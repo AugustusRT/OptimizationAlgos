@@ -3,38 +3,20 @@
 In this project I implemented various optimization methods and loss functions for classification tasks. By applying the different loss functions and optimization techniques across different datasets, I gained an understanding of the efficiency vs. accuracy tradeoff of each model, and under which conditions they thrive.
 
 ### Loss Functions:
-**1) Hinge-loss**
-$$\mbox{minimize}_{x\in\mathbb{R}^d, \beta \in \mathbb{R}} \ \frac{1}{n} \sum_{i=1}^n \max \{0,1-b_i(a_i^Tx + \beta)\},$$
-Where $a_i\in\mathbb{R}^d$ is the feature vector for sample $i$ and $b_i$ is the label of sample $i$. Note that this function is non-smooth.
+1) **Hinge Loss**: Non-smooth: Use sub-gradient optimization 
+2) **Hinge Loss** (Smooth Approximation): Use only optimization methods that only apply to smooth functions
+3) **L2 Penalized Logistic Regression**: Use only optimization methods that only apply to smooth functions\
 
-**2) Hinge-loss Smooth Approximation**
-
-$$
-\psi_\mu(z) = 
-\begin{cases}
-0 & z\ge 1\\
-(1-z)^2 & \mu < z < 1 \\
-(1-\mu)^2 + 2(1-\mu)(\mu-z) & z \le \mu.
-\end{cases}
-$$
-
-
-**3) L2-regularized logistic regression**
-$$\mbox{minimize}_{x\in\mathbb{R}^d,\beta\in\mathbb{R}} \ \lambda \|x\|_2^2 + \frac{1}{n} \sum_{i=1}^n \log (1+ \exp(-b_i(a_i^Tx + \beta))).$$
 ### Optimization Methods:
-i) Stochastic sub-gradient
-
+i) Stochastic sub-gradien
 ii) Stochastic gradient
-
 iii) Mini-batch (sub-)gradient
-
 iv) Stochastic average sub-gradient (SAG)
-
 v) Stochastic average gradient (SAG)
-
 vi) Gradient descent with Armijo line-search
-
 vii) Acceleratd gradient with Armijo line-search
 
-### Objective Functions
-
+# Datasets
+1) A9a: 22792 records, 123 features
+2) news20.binary: 19996 records, 1,355,191 features
+3) covtype.binary: 116202 records, 54 features
