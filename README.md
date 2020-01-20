@@ -22,7 +22,7 @@ vi) Gradient descent with Armijo line-search
 
 vii) Acceleratd gradient with Armijo line-search
 
-# Datasets
+### Datasets
 1) A9a: 22792 records, 123 features
 2) news20.binary: 19996 records, 1,355,191 features
 3) covtype.binary: 116202 records, 54 features
